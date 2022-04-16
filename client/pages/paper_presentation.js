@@ -256,8 +256,8 @@ const PaperPresentation = () => {
                           />
                           {
                             values.type === 'Paper Presentation Track' && <FileInput
-                              accept={'.doc,.docx,.pdf ( .doc, .docx or .pdf upto 2 mb )'}
-                              label='Upload Your Paper'
+                              accept={'.doc,.docx,.pdf'}
+                              label='Upload Your Paper ( .doc, .docx or .pdf upto 2 mb )'
                               name='file_paper'
                               onBlur={handleBlur}
                             />
