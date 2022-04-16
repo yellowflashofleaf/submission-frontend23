@@ -62,7 +62,7 @@ function Loginpage() {
           rounded={useColorModeValue("", "lg")}
           bg={useColorModeValue("white.100", "secondaries.800")}
         >
-          <Stack spacing={"8"} py={12}>
+          <Stack spacing={"8"} py={12} px={4}>
             <Stack align={"center"}>
               <Heading fontSize={"4xl"}>Sign in to your account </Heading>
             </Stack>
