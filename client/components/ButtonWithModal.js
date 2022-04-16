@@ -30,10 +30,10 @@ const ButtonWithModal = ({handleSubmit}) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Are You Sure?</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Are You Sure? Entry once submitted cannot be edited.
+            Entry once submitted cannot be edited.
           </ModalBody>
 
           <ModalFooter>

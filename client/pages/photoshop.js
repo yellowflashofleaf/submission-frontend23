@@ -198,7 +198,7 @@ const Photoshop = () => {
                                                 >
                                                     <FileInput
                                                         accept={'Image/*'}
-                                                        label='Upload Your Image'
+                                                        label='Upload Your Image ( .jpg, .jpeg or .png upto 10mb )'
                                                         name='file'
                                                         onBlur={handleBlur}
                                                     />
