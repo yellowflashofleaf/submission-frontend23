@@ -7,6 +7,7 @@ import { getLeaderboard } from '../../action/entries';
 import ContentLoader from '../../components/ContentLoader';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import AppContext from '../../context/AppContext';
+import privateUserRoute from '../../routers/privateUserRoute';
 
 const Leader = () => {
     const textColor = useColorModeValue("gray.700", "gray.50");
@@ -88,4 +89,4 @@ const Leader = () => {
     )
 }
 
-export default Leader;
+export default privateUserRoute(Leader);
