@@ -51,7 +51,7 @@ const PaperPresentation = () => {
       if (values.type === 'Paper Presentation Track') {
         paper_data = await uploadFile(values.file_paper);
         if (paper_data?.error) {
-          toast.error(paper_data?.error);
+          toast.error('Something went wrong');
           setLoading(false);
           return;
         }
