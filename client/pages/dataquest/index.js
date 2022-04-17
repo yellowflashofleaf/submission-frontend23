@@ -168,7 +168,7 @@ const Dataquest = () => {
                                             Rules
                                         </Text>
                                         <Text fontSize='lg'>
-                                            1. Participants are expected to submit their CSV files on the Pulzion'22 Submission Platform along with .ipynb/.py file.
+                                            1. Participants are expected to submit their CSV files on the Pulzion&apos;22 Submission Platform along with .ipynb/.py file.
                                         </Text>
                                         <Text fontSize='lg'>
                                             2. You can view the public leaderboard to compete against the best of the best solutions and achieve better results.
