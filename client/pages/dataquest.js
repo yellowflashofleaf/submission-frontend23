@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Button, chakra, Flex, useColorModeValue, Link } from '@chakra-ui/react'
 import NextLink from 'next/link';
 import Layout from '../components/Layout';
 import { ArrowRightIcon } from '@chakra-ui/icons';
+import AppContext from '../context/AppContext';
 
 const Dataquest = () => {
     const textColor = useColorModeValue("gray.700", "gray.50");
+    const { user } = useContext(AppContext);
+    const senior = user.year === 'TE' || user.year === 'BE';
     
     return (
         <Layout>
@@ -32,7 +35,7 @@ const Dataquest = () => {
                     textAlign={'center'}
                     fontWeight={"bold"}
                     color={textColor}>
-                    Submissions For data quest Starts From 17th April.
+                    Submissions For data quest will start soon.
                 </chakra.h1>
                 
                 <chakra.h3
@@ -40,17 +43,17 @@ const Dataquest = () => {
                         fontSize={20}
                         color={textColor}
                         textAlign={'center'}>
-                        Problem Statement has been Released
+                        Problem Statement has been Released.
                     </chakra.h3>
 
-                <Link href="https://pulzion.in/events" target='_blank'>
+                <Link href={senior ? 'https://drive.google.com/drive/folders/1gNtZtfYRDJHlkJ0U6_BvFywOmNedZ1_n' : 'https://drive.google.com/drive/folders/1DpQLBwoEUmj-U5pG-aJXLm-z1fDJcJMv'} target='_blank'>
                     <chakra.h3
                         fontWeight={"bold"}
                         fontSize={20}
                         textTransform={"uppercase"}
                         color={"purple.400"}
                         textAlign={'center'}>
-                        Get more details from website
+                        View Problem Statement
                     </chakra.h3>
                 </Link>
 
