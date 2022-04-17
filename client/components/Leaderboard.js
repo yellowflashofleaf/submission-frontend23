@@ -14,6 +14,10 @@ import {
 const Leaderboard = ({ submissions, senior }) => {
     const textColor = useColorModeValue("gray.700", "gray.50");
 
+    submissions.sort((a, b) => {
+        return senior ? (a.min - b.min ) : ((a.max+100) < (b.max+100));
+    });
+
     return (
         <TableContainer
             w={'100%'}>
