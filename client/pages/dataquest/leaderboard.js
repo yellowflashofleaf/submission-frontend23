@@ -34,7 +34,7 @@ const Leader = () => {
     return !loading ? (
         <Layout>
             <Box
-                w='100%' 
+                w='100%'
                 px={{
                     base: '16px',
                     md: '48px',
@@ -42,46 +42,61 @@ const Leader = () => {
                 }}
                 pt="100px"
             >
-            <Flex
-                // alignItems={'center'}
-                justifyContent={'center'}
-                w='100%'
-                p={'20px'}
-                flexDirection={'column'}
-                rounded={"lg"}
-                bg={cardBg}
-                boxShadow={"md"}
+                <Flex
+                    // alignItems={'center'}
+                    justifyContent={'center'}
+                    w='100%'
+                    p={'20px'}
+                    flexDirection={'column'}
+                    rounded={"lg"}
+                    bg={cardBg}
+                    boxShadow={"md"}
 
-            >
-                <NextLink href='/dataquest'>
-                    <chakra.h3
+                >
+                    <NextLink href='/dataquest'>
+                        <chakra.h3
+                            fontWeight={"bold"}
+                            fontSize={20}
+                            textTransform={"uppercase"}
+                            color={"purple.400"}
+                            cursor="pointer"
+                            display={'flex'}
+                            alignItems={'center'}
+                            mb={3}
+                        >
+                            <ChevronLeftIcon w={6} h={6} /> <span>Back to Entry Submission</span>
+                        </chakra.h3>
+                    </NextLink>
+                    <chakra.h1
+                        fontSize={{
+                            base: 36,
+                            md: 48
+
+                        }}
+
+                        // textAlign={'center'}
                         fontWeight={"bold"}
-                        fontSize={20}
-                        textTransform={"uppercase"}
-                        color={"purple.400"}
-                        cursor="pointer"
-                        display={'flex'}
-                        alignItems={'center'}
-                        mb={3}
-                    >
-                        <ChevronLeftIcon w={6} h={6} /> <span>Back to Entry Submission</span>
-                    </chakra.h3>
-                </NextLink>
-                <chakra.h1
-                    fontSize={{
-                        base: 36,
-                        md: 48
+                        color={textColor}
+                        pb={'40px'}>Leaderboard {senior ? "( TE-BE )" : "( FE-SE )"}</chakra.h1>
 
-                    }}
+                    {submissions && submissions?.length > 10 ?
+                        <Leaderboard submissions={submissions} senior={senior} />
+                        :
+                        <chakra.h3
+                            fontWeight={"bold"}
+                            fontSize={{
+                                base: 18,
+                                md: 36
+                            }}
+                            color={textColor}
+                            textAlign={'center'}
+                            mb={3}
+                        >
+                         Leaderboard will be live soon!
+                        </chakra.h3>
+                    }
 
-                    // textAlign={'center'}
-                    fontWeight={"bold"}
-                    color={textColor}
-                    pb={'40px'}>Leaderboard {senior ? "( TE-BE )" : "( FE-SE )"}</chakra.h1>
-
-                <Leaderboard submissions={submissions} senior={senior} />
-
-            </Flex>
+                </Flex>
             </Box>
         </Layout>
     ) : (
