@@ -19,7 +19,7 @@ const Leader = () => {
     useEffect(() => {
         const fetchSubmissions = async () => {
             try {
-                const data = await getLeaderboard('dataquest')
+                const data = await getLeaderboard('dataquest2')
                 if (data?.error) {
                     console.log(data.error);
                 }
@@ -79,22 +79,8 @@ const Leader = () => {
                         color={textColor}
                         pb={'40px'}>Leaderboard {senior ? "( TE-BE )" : "( FE-SE )"}</chakra.h1>
 
-                    {submissions && submissions?.length > 10 ?
                         <Leaderboard submissions={submissions} senior={senior} />
-                        :
-                        <chakra.h3
-                            fontWeight={"bold"}
-                            fontSize={{
-                                base: 18,
-                                md: 36
-                            }}
-                            color={textColor}
-                            textAlign={'center'}
-                            mb={3}
-                        >
-                         Leaderboard will be live soon!
-                        </chakra.h3>
-                    }
+                        
 
                 </Flex>
             </Box>
