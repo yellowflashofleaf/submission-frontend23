@@ -118,7 +118,7 @@ const Dataquest = () => {
                         fontWeight={"bold"}
                         color={textColor}
                     >
-                        DataQuest {senior ? "( TE-BE )" : "( FE-SE )"}
+                        DataQuest Round 2 {senior ? "( TE-BE )" : "( FE-SE )"}
                     </chakra.h1>
                     <NextLink href='/dataquest/leaderboard'>
                         <chakra.span
@@ -152,7 +152,7 @@ const Dataquest = () => {
                                             Problem Statement
                                         </Text>
                                         <Text fontSize='lg'>
-                                            click <Link href={senior ? 'https://drive.google.com/drive/folders/1gNtZtfYRDJHlkJ0U6_BvFywOmNedZ1_n' : 'https://drive.google.com/drive/folders/1DpQLBwoEUmj-U5pG-aJXLm-z1fDJcJMv'} target={"_blank"} color={"blue.500"}>here</Link> to view the problem statement and dataset.
+                                            click <Link href={senior ? 'https://drive.google.com/drive/folders/1xFdaJY7xOyAmANreTbqyz_0HTOWYYcBj?usp=sharing' : 'https://drive.google.com/drive/folders/11DW1H4CEcjthJB5LG2pgVK8kgtO1Xbsa'} target={"_blank"} color={"blue.500"}>here</Link> to view the problem statement and dataset.
                                         </Text>
                                         <Text fontSize='lg'>
                                             - Participants are given 3 csv files namely train.csv, test.csv and sample_submission.csv
@@ -209,7 +209,7 @@ const Dataquest = () => {
                                                             gap={5}
                                                         >
                                                             <Text fontSize='lg'>{dateString(submission.created_at)}</Text>
-                                                            <Text fontSize='lg'>{senior ? "Error: " : "Accuracy : "} {acc.toPrecision(5)}</Text>
+                                                            <Text fontSize='lg'>{senior ? "F1 Score: " : "Mean Square Error : "} {acc.toPrecision(5)}</Text>
                                                         </Flex>
                                                         <Link href={submission.submission_csv}>
                                                             <DownloadIcon fontSize={'lg'} />

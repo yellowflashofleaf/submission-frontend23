@@ -33,7 +33,7 @@ const Leaderboard = ({ submissions, senior }) => {
                 <Tbody>
                     {
                         submissions?.map((submission, index) => {
-                            const acc = senior ? submission.min : submission.max
+                            const acc = senior ? submission.max : submission.min
                             return (
                                 <Tr key={index}>
                                     <Td textAlign={'center'}>{index + 1}</Td>
@@ -54,7 +54,7 @@ const Leaderboard = ({ submissions, senior }) => {
                         <Th textAlign={'center'}>First Name</Th>
                         <Th textAlign={'center'}>Last Name</Th>
                         {/* <Th textAlign={'center'}>Accuracy</Th> */}
-                        <Th textAlign={'center'}>{senior ? "Error" :  "Accuracy"}</Th>
+                        <Th textAlign={'center'}>{senior ? "F1 Score" :  "Mean Square Error"}</Th>
                     </Tr>
                 </Tfoot>
             </Table>
