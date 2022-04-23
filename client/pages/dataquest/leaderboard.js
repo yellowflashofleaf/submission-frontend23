@@ -78,8 +78,26 @@ const Leader = () => {
                         fontWeight={"bold"}
                         color={textColor}
                         pb={'40px'}>Leaderboard {senior ? "( TE-BE )" : "( FE-SE )"}</chakra.h1>
-
+                        {
+                            submissions?.length > 100 ? (
                         <Leaderboard submissions={submissions} senior={senior} />
+                            ) : (
+                                <chakra.h3
+                                    fontWeight={"bold"}
+                                    fontSize={32}
+                                    color={textColor}
+                                    w={'100%'}
+                                    cursor="pointer"
+                                    textAlign={'center'}
+                                    display={'flex'}
+                                    alignItems={'center'}
+                                    mb={3}
+                                >
+                                    Leaderboard will be live soon.
+                                </chakra.h3>
+                            )
+                        }
+
                         
 
                 </Flex>
