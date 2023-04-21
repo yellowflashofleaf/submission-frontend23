@@ -1,5 +1,5 @@
 const apiConfig = {
-  url: "https://submission.pulzion.co.in",
+  url: "https://api.submission.pulzion.co.in",
   //url: "http://localhost:8000",
   accessKey: "AKIATBQ3EXK2FW3BELKF",
   secretAccessKey: "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",
