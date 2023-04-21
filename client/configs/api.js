@@ -1,9 +1,9 @@
-
 const apiConfig = {
-    url: "https://api.submission.pulzion.in",
-    accessKey: "AKIAXQMB7SAJTJLXXZUW",
-    secretAccessKey: "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",
-    srUi: 'https://pulzion22.s3.ap-south-1.amazonaws.com/'
+  url: "https://submission.pulzion.co.in",
+  //url: "http://localhost:8000",
+  accessKey: "AKIATBQ3EXK2FW3BELKF",
+  secretAccessKey: "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",
+  srUi: "https://pulzion-submission.s3.ap-south-1.amazonaws.com/",
 };
 
 export default apiConfig;

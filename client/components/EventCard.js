@@ -18,7 +18,7 @@ const EventCard = ({ event, page }) => {
       <Box
         w={"90%"}
         maxW={"200px"}
-        bg={'secondaries.900', 'secondaries.900'}
+        bg={'secondaries.900'}
         p={8}
         borderRadius={"50%"}
       >

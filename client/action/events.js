@@ -1,9 +1,9 @@
-import axios from 'axios';
-import apiConfig from '../configs/api';
+import axios from "axios";
+import apiConfig from "../configs/api";
 
 export const getRegisteredEvents = async (dispatchEvents) => {
   const submission = JSON.parse(localStorage.getItem("submission"));
-  if (submission.type === 'user') {
+  if (submission.type === "user") {
     const options = {
       method: "GET",
       url: `${apiConfig.url}/user_events`,
@@ -14,11 +14,12 @@ export const getRegisteredEvents = async (dispatchEvents) => {
     };
     try {
       const res = await axios(options);
+      console.log("line number 17 in get events", res.data.events);
       dispatchEvents({
         type: "SET_EVENTS",
-        events: res.data.events
+        events: res.data.events,
       });
-      return res.data
+      return res.data;
     } catch (e) {
       console.log(e);
       if (e?.response?.data) {
@@ -29,4 +30,4 @@ export const getRegisteredEvents = async (dispatchEvents) => {
       };
     }
   }
-}
+};
