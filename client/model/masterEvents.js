@@ -29,6 +29,12 @@ export const masterEvents = [
     name: "Paper Presentation",
     page: "/paper_presentation",
   },
+  {
+    id: 6,
+    ems_id: 18,
+    name: "Freeze the second",
+    page: "/freeze_second",
+  },
 ];
 
 export const emsIds = {
@@ -37,4 +43,5 @@ export const emsIds = {
   insight: 15,
   photoshop: 16,
   paper: 14,
+  freeze: 18,
 };

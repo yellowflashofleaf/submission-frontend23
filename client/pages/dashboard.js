@@ -60,7 +60,7 @@ const Dashboard = () => {
         >
           {contEvents.map((event) => {
             console.log("line 68 in dashboard", event, masterEvents);
-            const eve = masterEvents.find((eve) => eve.ems_id === event.ems_id);
+            const eve = masterEvents.find((eve) => eve.ems_id === event.ems_id && event.play === true);
             return (
               <EventCard
                 id={event.id}
