@@ -1,7 +1,8 @@
-import { ArrowRightIcon } from '@chakra-ui/icons'
-import { Box, Button, chakra, Flex, Image } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
-import React from 'react'
+import { ArrowRightIcon } from "@chakra-ui/icons";
+import { Box, Button, chakra, Flex, Image } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import React from "react";
+import { toast } from "react-toastify";
 
 const EventCard = ({ event, page }) => {
   const router = useRouter();
@@ -18,29 +19,29 @@ const EventCard = ({ event, page }) => {
       <Box
         w={"90%"}
         maxW={"200px"}
-        bg={'secondaries.900'}
+        bg={"secondaries.900"}
         p={8}
         borderRadius={"50%"}
       >
-        <Image
-          src={event.logo}
-          alt="logo"
-        />
+        <Image src={event.logo} alt="logo" />
       </Box>
-      <chakra.h1
-        fontWeight={"bold"}
-        fontSize={30}
-      >
+      <chakra.h1 fontWeight={"bold"} fontSize={30}>
         {event.name}
       </chakra.h1>
       <Button
         rightIcon={<ArrowRightIcon />}
         width={40}
         p={"10px"}
-        onClick={()=>router.push(page)}
-      >Play</Button>
+        onClick={() =>
+          page
+            ? router.push(page)
+            : (router.push("/dashboard"), toast.error("Event not started"))
+        }
+      >
+        Play
+      </Button>
     </Flex>
-  )
-}
+  );
+};
 
-export default EventCard
+export default EventCard;
