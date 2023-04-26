@@ -171,10 +171,7 @@ const Webapp = () => {
                       idea presentation.
                     </Text>
                     <Text fontSize="lg">
-                      7. Upload a GitHub repository link of the prototype.
-                    </Text>
-                    <Text fontSize="lg">
-                      8. Participants should rename their entry as
+                      7. Participants should rename their entry as
                       GroupName_teamLeaderName.extension
                     </Text>
                   </Stack>
