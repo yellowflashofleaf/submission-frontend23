@@ -86,7 +86,7 @@ const Webapp = () => {
             display={'flex'}
             alignItems={'center'}
           >
-            <ChevronLeftIcon w={6} h={6}/> <span>Back to all events</span>
+            <ChevronLeftIcon w={6} h={6} /> <span>Back to all events</span>
           </chakra.h3>
         </NextLink>
         <chakra.h1
@@ -115,20 +115,30 @@ const Webapp = () => {
                     <Text fontSize='2xl'>
                       Topics
                     </Text>
-                    <Text fontSize='lg'>
-                      - Application for an NGO to display its work + accept donations
+                    <Text fontSize='xl'>
+                      Topics for FE/SE category:
                     </Text>
                     <Text fontSize='lg'>
-                      - Travelogue Application
+                      1. Social media post and exploration section
                     </Text>
                     <Text fontSize='lg'>
-                      - Application for Health and Fitness
+                      2. Blog Website
                     </Text>
                     <Text fontSize='lg'>
-                      - Website/App for selling sports goods
+                      3. Online marketplace (vehicle or any other category)
+                    </Text>
+                    <Text fontSize='xl'>
+                      For (SE/TE/BE - Full Stack) judged on full - stack application implementation.
+                      Topics for SE/TE/BE category:
                     </Text>
                     <Text fontSize='lg'>
-                      - Smart hiring platform for recruiters
+                      1. A taskmaster that allows users to create and manage their tasks + expense tracker
+                    </Text>
+                    <Text fontSize='lg'>
+                      2. Crypto Tracker (Keep tracks of Cryptocurrency i.e time, value, data)
+                    </Text>
+                    <Text fontSize='lg'>
+                      3. A community service platform for public welfare.
                     </Text>
                   </Stack>
                 </TabPanel>
@@ -137,20 +147,29 @@ const Webapp = () => {
                     <Text fontSize='2xl'>
                       Instructions
                     </Text>
-                    <Text fontSize='lg'>
-                      1. Topics are out, the idea submission deadline is 18th April 2021 (11:59 pm)
+                    <Text fontSize='lg' fontWeight='semibold'>
+                      1. All team member's name should be present in PPT.
+                    </Text>
+                    <Text fontSize='lg' fontWeight='semibold'>
+                      2. PPT should be of size 6-7 pages.
+                    </Text>
+                    <Text fontSize='lg' fontWeight='semibold'>
+                      3. PPT should contain the github link of the project.
                     </Text>
                     <Text fontSize='lg'>
-                      2. Participants will have to choose only a topic (listed above in &lsquo;Rounds&lsquo;) and make a presentation on their idea.
+                      4. Topics are out, the idea submission deadline is 1st May 2023 (11:59 pm)
                     </Text>
                     <Text fontSize='lg'>
-                      3. Include a maximum of 6 slides in the PPT.
+                      5. Participants will have to choose only a topic (listed above in 'Rounds) and make a presentation on their idea as well as a basic prototype of their project.
                     </Text>
                     <Text fontSize='lg'>
-                      4. Shortlisted participants from round 1 will enter round 2, where you will have to make a website or an app based on the idea you submitted.
+                      6. Ppt slides can include web/app screenshots as well as idea presentation.
                     </Text>
                     <Text fontSize='lg'>
-                      5. Participants should rename their entry as FirstName_LastName.extension
+                      7. Upload a GitHub repository link of the prototype.
+                    </Text>
+                    <Text fontSize='lg'>
+                      8.  Participants should rename their entry as GroupName_teamLeaderName.extension
                     </Text>
                   </Stack>
                 </TabPanel>
@@ -212,7 +231,7 @@ const Webapp = () => {
           }
         </SimpleGrid>
       </Box>
-    </Layout>
+    </Layout >
   ) : (
     <ContentLoader />
   )
