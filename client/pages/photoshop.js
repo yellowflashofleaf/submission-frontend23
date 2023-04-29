@@ -116,7 +116,7 @@ const Photoshop = () => {
                                             Theme
                                         </Text>
                                         <Text fontSize='2xl'>
-                                            - Time Travel
+                                            - Space Culture
                                         </Text>
                                     </Stack>
                                 </TabPanel>
