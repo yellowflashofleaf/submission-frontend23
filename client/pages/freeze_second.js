@@ -120,7 +120,9 @@ const Freeze = () => {
                 <TabPanel>
                   <Stack spacing={3}>
                     <Text fontSize="2xl">Theme</Text>
-                    <Text fontSize="2xl">- Time Travel</Text>
+                    <Text fontSize="2xl">
+                      Photographs on any theme will be accepted!
+                    </Text>
                   </Stack>
                 </TabPanel>
                 <TabPanel>
@@ -131,26 +133,20 @@ const Freeze = () => {
                       entries through the submission platform!
                     </Text>
                     <Text fontSize="lg">
-                      2. Participants will have to choose only a topic (listed
-                      above in &lsquo;Rounds&lsquo;) and make a presentation on
-                      their idea.
+                      2.Photos must be in JPEG, JPG, or PNG format only.
                     </Text>
                     <Text fontSize="lg">
-                      3. There are 3 dimensions in which you can choose anyone.
-                      These are not categories and all designs of each of these
-                      dimensions will compete with each other.
-                    </Text>
-                    <Text fontSize="lg">The dimensions are:</Text>
-                    <Text fontSize="lg">A. Square - 2000px X 2000px</Text>
-                    <Text fontSize="lg">B. Landscape - 1920px X 1080px</Text>
-                    <Text fontSize="lg">C. Portrait - 1080px X 1350px</Text>
-                    <Text fontSize={"lg"}>
-                      4. The best entries will get selected for Round 2 in which
-                      you&lsquo;ll be given a topic on spot.
+                      3. You are required to provide a unique title &
+                      description for each image submitted.
                     </Text>
                     <Text fontSize={"lg"}>
-                      5. Use of copyrighted/stock images is prohibited. Free
-                      license images are allowed.
+                      4. Advanced editing used to create illusions, deceptions
+                      and/or manipulations, and the adding and removing of
+                      significant elements within the frame is prohibited.
+                    </Text>
+                    <Text fontSize={"lg"}>
+                      5. The decision of the organizers and judges will be final
+                      and binding on all participants.
                     </Text>
                   </Stack>
                 </TabPanel>

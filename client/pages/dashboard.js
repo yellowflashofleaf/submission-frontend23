@@ -58,12 +58,11 @@ const Dashboard = () => {
             lg: "64px",
           }}
         >
-          {console.log("LIne 61",contEvents)}
+          {console.log("LIne 61", contEvents)}
           {contEvents.map((event) => {
             console.log("line 68 in dashboard", event, masterEvents);
             const eve = masterEvents.find(
-              (eve) =>
-                (eve.ems_id === event.ems_id ) 
+              (eve) => eve.ems_id === event.ems_id && event.name != "DataQuest"
             );
             return (
               <EventCard
