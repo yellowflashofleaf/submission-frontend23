@@ -26,7 +26,7 @@ const Leaderboard = ({ submissions, senior }) => {
                         <Th textAlign={'center'}>Email</Th>
                         <Th textAlign={'center'}>First Name</Th>
                         <Th textAlign={'center'}>Last Name</Th>
-                        <Th textAlign={'center'}>{senior ? "Error" :  "Accuracy"}</Th>
+                        <Th textAlign={'center'}>{"Accuracy"}</Th>
 
                     </Tr>
                 </Thead>
