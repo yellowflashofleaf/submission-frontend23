@@ -188,8 +188,8 @@ const Freeze = () => {
                   <form onSubmit={handleSubmit}>
                     <Stack spacing={10}>
                       <FileInput
-                        accept={"Image/*"}
-                        label="Upload Your Image ( .jpg, .jpeg or .png upto 10mb )"
+                        accept={'Image/*,.pdf'}
+                        label='Upload Your Image ( .jpg, .jpeg or .png .pdf upto 10mb )'
                         name="file"
                         onBlur={handleBlur}
                       />
