@@ -77,28 +77,27 @@ const Leader = () => {
             color={textColor}
             pb={"40px"}
           >
-            Leaderboard
+            Leaderboard (Top 5)
           </chakra.h1>
-          {/* {
-                            submissions?.length > 100 ? (
-                        <Leaderboard submissions={submissions} senior={senior} />
-                            ) : (
-                                <chakra.h3
-                                    fontWeight={"bold"}
-                                    fontSize={32}
-                                    color={textColor}
-                                    w={'100%'}
-                                    cursor="pointer"
-                                    textAlign={'center'}
-                                    display={'flex'}
-                                    alignItems={'center'}
-                                    mb={3}
-                                >
-                                    Leaderboard will be live soon.
-                                </chakra.h3>
-                            )
-                        } */}
-          <chakra.h3
+          {console.log("in dataquest leaderboard", submissions)}
+          {submissions?.length > 0 ? (
+            <Leaderboard submissions={submissions} senior={senior} />
+          ) : (
+            <chakra.h3
+              fontWeight={"bold"}
+              fontSize={32}
+              color={textColor}
+              w={"100%"}
+              cursor="pointer"
+              textAlign={"center"}
+              display={"flex"}
+              alignItems={"center"}
+              mb={3}
+            >
+              Leaderboard will be live soon.
+            </chakra.h3>
+          )}
+          {/* <chakra.h3
             fontWeight={"bold"}
             fontSize={32}
             color={textColor}
@@ -110,7 +109,7 @@ const Leader = () => {
             mb={3}
           >
             Leaderboard will be live soon.
-          </chakra.h3>
+          </chakra.h3> */}
         </Flex>
       </Box>
     </Layout>
