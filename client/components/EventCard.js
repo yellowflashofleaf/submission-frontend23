@@ -35,7 +35,8 @@ const EventCard = ({ event, page }) => {
         onClick={() =>
           page
             ? router.push(page)
-            : (router.push("/dashboard"), toast.error("Event not started"))
+            : (router.push("/dashboard"),
+              toast.error("Event submissions closed"))
         }
       >
         Play

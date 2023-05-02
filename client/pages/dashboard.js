@@ -61,7 +61,7 @@ const Dashboard = () => {
           {console.log("LIne 61", contEvents)}
           {contEvents.map((event) => {
             console.log("line 68 in dashboard", event, masterEvents);
-            const eve = masterEvents.find((eve) => eve.ems_id === event.ems_id);
+            const eve = masterEvents.find((eve) => eve.ems_id === event.ems_id &&  event.name != "Paper Presentation" && event.name != "Web + App Dev");
             return (
               <EventCard
                 id={event.id}
