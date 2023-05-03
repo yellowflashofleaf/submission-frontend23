@@ -65,8 +65,7 @@ const Dashboard = () => {
               (eve) =>
                 eve.ems_id === event.ems_id &&
                 event.name != "Paper Presentation" &&
-                event.name != "Insight" &&
-                event.name != "Photoshop royale"
+                event.name != "Insight" 
             );
             return (
               <EventCard
