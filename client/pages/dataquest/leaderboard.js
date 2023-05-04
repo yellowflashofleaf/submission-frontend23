@@ -79,7 +79,7 @@ const Leader = () => {
           >
             Leaderboard (Top 3) {senior ? "( TE-BE )" : "( FE-SE )"}
           </chakra.h1>
-          {submissions?.length > 100 ? (
+          {submissions?.length > 3 ? (
             <Leaderboard submissions={submissions} senior={senior} />
           ) : (
             <chakra.h3
