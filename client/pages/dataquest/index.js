@@ -251,8 +251,7 @@ const Dataquest = () => {
                               {dateString(submission.created_at)}
                             </Text>
                             <Text fontSize="lg">
-                              {senior ? "F1 Score: " : "Mean Square Error : "}{" "}
-                              {acc.toPrecision(5)}
+                              {"Root Mean Square Error : "} {acc.toPrecision(5)}
                             </Text>
                           </Flex>
                           <Link href={submission.submission_csv}>
