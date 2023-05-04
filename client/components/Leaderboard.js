@@ -24,13 +24,13 @@ const Leaderboard = ({ submissions, senior }) => {
             <Th textAlign={"center"}>Email</Th>
             <Th textAlign={"center"}>First Name</Th>
             <Th textAlign={"center"}>Last Name</Th>
-            <Th textAlign={"center"}>{"Accuracy"}</Th>
+            <Th textAlign={'center'}>{senior ? "Error" :  "Accuracy"}</Th>
           </Tr>
         </Thead>
         <Tbody>
           {submissions?.map((submission, index) => {
             console.log("In leader board ", submission);
-            const acc = submission?.max;
+            const acc = senior ? submission.max : submission.min;
             return (
               <Tr key={index}>
                 <Td textAlign={"center"}>{index + 1}</Td>
@@ -49,7 +49,7 @@ const Leaderboard = ({ submissions, senior }) => {
             <Th textAlign={"center"}>Email</Th>
             <Th textAlign={"center"}>First Name</Th>
             <Th textAlign={"center"}>Last Name</Th>
-            <Th textAlign={"center"}>Accuracy</Th>
+            <Th textAlign={'center'}>{senior ? "F1 Score" :  "Mean Square Error"}</Th>
             {/* <Th textAlign={'center'}>{"Accuracy"}</Th> */}
           </Tr>
         </Tfoot>

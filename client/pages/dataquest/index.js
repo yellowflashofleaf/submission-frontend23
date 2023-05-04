@@ -74,7 +74,7 @@ const Dataquest = () => {
           submission_csv: data.submission,
           submission_python: data_python.submission,
         },
-        "dataquest"
+        "dataquest2"
       );
       if (entryData?.error) {
         toast.error(entryData?.error);
@@ -96,7 +96,7 @@ const Dataquest = () => {
   useEffect(() => {
     const fetchSubmission = async () => {
       try {
-        const entryData = await getEntries("dataquest");
+        const entryData = await getEntries("dataquest2");
         if (entryData?.error) {
           console.log(entryData?.error);
         }
@@ -136,7 +136,7 @@ const Dataquest = () => {
         </NextLink>
         <Box py={5}>
           <chakra.h1 fontSize={48} fontWeight={"bold"} color={textColor}>
-            DataQuest Round 1
+            DataQuest Round 2 {senior ? "( TE-BE )" : "( FE-SE )"}
           </chakra.h1>
           <NextLink href="/dataquest/leaderboard">
             <chakra.span
@@ -178,13 +178,14 @@ const Dataquest = () => {
                       the given dataset
                     </Text>
                     <Text fontSize="lg">
-                      - Participants will be given link to 3 datasets namely train.csv, test.csv and sample_submission.csv
+                      - Participants will be given link to 3 datasets namely
+                      train.csv, test.csv and sample_submission.csv
                     </Text>
                     <Text fontSize="lg">
                       - Participants have to use train and test files and build
                       a model based on it and by referring to the sample
-                      submission they would have to submit a submission.csv
-                      file and a .ipynb/.py file on our submission platform.
+                      submission they would have to submit a submission.csv file
+                      and a .ipynb/.py file on our submission platform.
                     </Text>
                   </Stack>
                 </TabPanel>
@@ -250,7 +251,8 @@ const Dataquest = () => {
                               {dateString(submission.created_at)}
                             </Text>
                             <Text fontSize="lg">
-                              {"Accuracy : "} {acc.toPrecision(5)}
+                              {senior ? "F1 Score: " : "Mean Square Error : "}{" "}
+                              {acc.toPrecision(5)}
                             </Text>
                           </Flex>
                           <Link href={submission.submission_csv}>
