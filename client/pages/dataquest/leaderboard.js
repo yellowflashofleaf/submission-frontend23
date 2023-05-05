@@ -79,7 +79,7 @@ const Leader = () => {
           >
             Leaderboard (Top 3) {senior ? "( TE-BE )" : "( FE-SE )"}
           </chakra.h1>
-          {submissions?.length > 0 ? (
+          {/* {submissions?.length > 0 ? (
             <Leaderboard submissions={submissions} senior={senior} />
           ) : (
             <chakra.h3
@@ -93,9 +93,22 @@ const Leader = () => {
               alignItems={"center"}
               mb={3}
             >
-              Leaderboard will be live soon.
+              Results will be Declared at 3:30.
             </chakra.h3>
-          )}
+          )} */}
+          <chakra.h3
+              fontWeight={"bold"}
+              fontSize={32}
+              color={textColor}
+              w={"100%"}
+              cursor="pointer"
+              textAlign={"center"}
+              display={"flex"}
+              alignItems={"center"}
+              mb={3}
+            >
+              Results will be Declared at 3:30.
+            </chakra.h3>
         </Flex>
       </Box>
     </Layout>
